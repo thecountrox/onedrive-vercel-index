@@ -56,7 +56,7 @@ export async function requestTokenWithAuthCode(
   | { error: string; errorDescription: string; errorUri: string }
 > {
   const { clientId, redirectUri, authApi } = apiConfig
-  const clientSecret = revealObfuscatedToken(apiConfig.obfuscatedClientSecret)
+  const clientSecret = apiConfig.clientSecret1
 
   // Construct URL parameters for OAuth2
   const params = new URLSearchParams()
